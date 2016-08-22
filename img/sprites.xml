@@ -1,0 +1,3 @@
+<TextureAtlas imagePath="sprites.png">
+	<SubTexture name="SBM4-Bomberman-_000.png" x="0" y="0" width="263" height="371"/>
+</TextureAtlas>
