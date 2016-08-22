@@ -1,0 +1,25 @@
+{
+  "name": "BomberDude",
+  "version": "1.0.0",
+  "description": "I am going to make Bomberman!!!!! A game that allows a player to control a character on a 2d map. The character can lay bombs. The bombs can be augmented by power-ups that are revealed when a player destroys garbage 'blocks' that are randomly distributed throughout the map.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack" : "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zepdrix/BomberDude.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zepdrix/BomberDude/issues"
+  },
+  "homepage": "https://github.com/zepdrix/BomberDude#readme"
+}
