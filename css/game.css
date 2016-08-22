@@ -1,7 +1,12 @@
-canvas {
+canvascanvas {
+  position: absolute;
   margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  height: 1800px;
-  width: 2400px;
+  width: 1700px;
+  max-height: 1300px;
+}
+
+.instructions {
+  position: relative;
+  top: 450px;
+  /*z-index: 10;*/
 }
