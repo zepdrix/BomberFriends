@@ -1,12 +1,18 @@
+body {
+  width: 100%;
+}
+
 canvas {
-  position: absolute;
+
+  display: block;
   margin: 0 auto;
-  width: 1700px;
-  max-height: 1300px;
+  margin-top: 50px;
+  width: 544px;
+  height: 416px;
 }
 
 .instructions {
-  position: relative;
-  top: 450px;
-  /*z-index: 10;*/
+  display: block;
+  margin: 0 auto;
+  width: 300px;
 }
