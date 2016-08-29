@@ -1,6 +1,18 @@
+/*@font-face {
+  font-family: 'BomberFont';
+  src: url('http://www.myfontfree.com/data/2/p/pixel_noir/Pixel-Noir.ttf') format('truetype');
+  src: local('./Pixel-Noir.ttf') format('truetype');
+  src: local(Pixel-Noir.ttf) format('truetype');
+}*/
+
+@font-face{
+	font-family:"Pixel-Noir";
+	src:url("http://www.libfreefonts.com/data/2/p/pixel_noir/Pixel-Noir.ttf");
+}
+
 body {
   width: 100%;
-  font-style: sans-serif;
+  font-family: 'Pixel-Noir', sans-serif;
   background-color: #C4EDFF;
 }
 
@@ -14,13 +26,23 @@ canvas {
   border: 15px 15px 15px 15px grey;
   display: block;
   margin: 0 auto;
-  /*margin-top: 50px;*/
   width: 544px;
   height: 416px;
 }
 
 .instructions {
   display: block;
+  /*float: left;*/
   margin: 0 auto;
-  width: 300px;
+  width: 600px;
+}
+
+.intro {
+  float: left;
+  width: 400px;
+}
+.controls {
+  float: right;
+  margin-top: 40px;
+  width: 160px;
 }
