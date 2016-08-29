@@ -1,9 +1,17 @@
 body {
   width: 100%;
+  font-style: sans-serif;
+  background-color: #C4EDFF;
+}
+
+h1 {
+  text-align: center;
+
 }
 
 canvas {
-
+  border-style: inset;
+  border: 15px 15px 15px 15px grey;
   display: block;
   margin: 0 auto;
   /*margin-top: 50px;*/
