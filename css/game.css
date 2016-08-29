@@ -5,10 +5,10 @@
   src: local(Pixel-Noir.ttf) format('truetype');
 }*/
 
-@font-face{
+/*@font-face{
 	font-family:"Pixel-Noir";
-	src:url("http://www.libfreefonts.com/data/2/p/pixel_noir/Pixel-Noir.ttf");
-}
+	src:url("Pixel-Noir.ttf") format('truetype');
+}*/
 
 body {
   width: 100%;
