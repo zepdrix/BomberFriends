@@ -4,45 +4,187 @@
   src: local('./Pixel-Noir.ttf') format('truetype');
   src: local(Pixel-Noir.ttf) format('truetype');
 }*/
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
 
-/*@font-face{
-	font-family:"Pixel-Noir";
-	src:url("Pixel-Noir.ttf") format('truetype');
-}*/
+@font-face{
+	font-family:"Stay_Writer";
+	src:url("Stay_Writer.ttf") format('truetype');
+}
 
 body {
   width: 100%;
-  font-family: 'Pixel-Noir', sans-serif;
-  background-color: #C4EDFF;
+  height: 100%;
+  font-family: 'Stay_Writer', sans-serif;
+  font-size: 24px;
+  color: lightgrey;
+  float: left;
+  background-image: url('../img/triangles_tile.jpg');
+  /*opacity: 0.4;*/
+  /*background: linear-gradient(to right, #C4EDFF, #41CCA5);*/
+  /*background-color: #C4EDFF;*/
 }
 
 h1 {
+  font-weight: bold;
+
+  /*margin-top: 10px;*/
+  margin: 20px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-shadow: 0 0 50px lightgrey;
   text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+
+  margin-bottom: 10px;
+  font-size: 32px;
+  text-shadow: 0 0 50px lightgrey;
+  text-align: center;
+}
+
+h3 {
+  margin: 10px;
 
 }
 
 canvas {
   border-style: inset;
-  border: 15px 15px 15px 15px grey;
+  border: 15px 15px  grey;
   display: block;
+  /*float: left;*/
+
   margin: 0 auto;
   width: 544px;
   height: 416px;
 }
 
 .instructions {
-  display: block;
-  /*float: left;*/
+  text-align: center;
+  padding-bottom: 10px;
   margin: 0 auto;
-  width: 600px;
+  width: 800px;
+}
+
+
+
+.audio {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  background-color: rgba(222, 222, 222, 0.15);
+}
+
+.audio > p {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .intro {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(222, 222, 222, 0.15);
+}
+
+.powerups, .character {
+  border-radius: 10px;
+  float: left;
+  width: 500px;
+  margin-bottom: 20px;
+  background-color: rgba(222, 222, 222, 0.15);
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 5px white;
+  transition: 0.3s;
+}
+
+.contact, .controls {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  float: right;
+  width: 280px;
+  background-color: rgba(222, 222, 222, 0.15);
+}
+
+/*.controls {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  float: right;
+  width: 280px;
+  background-color: rgba(222, 222, 222, 0.15);
+}*/
+
+.powerups {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 500px;
+  float: right;
+}
+
+div > img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  float: left;
+  /*top: -20px;*/
+  width: 32px;
+}
+
+.powerup-p {
   float: left;
   width: 400px;
+  text-align: left;
+  margin-top: 10px;
 }
-.controls {
-  float: right;
-  margin-top: 40px;
-  width: 160px;
+
+.powerups > h3 {
+  margin-bottom: 0;
+
+}
+
+.powerup-item {
+  display: block;
+}
+
+.links {
+  width: 170px;
+  padding-left: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.links > a {
+  margin-right: 30px;
+}
+
+.sound-helper {
+  font-size: 20px;
 }

@@ -3,7 +3,8 @@
   <head>
     <link  href="css/game.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="img/favicon.ico" type='image/x-icon'>
-
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <img src='img/wall.png' hidden/>
     <img src='img/tile.png' hidden/>
     <img src='img/block.png' hidden/>
@@ -31,6 +32,8 @@
     <img src='img/bomb.png' hidden/>
     <img src='img/flame.gif' hidden/>
     <img src='img/flamePowerup.png' hidden/>
+    <img src='img/triangles.jpg' hidden/>
+
     <audio src="sounds/explosion.mp3" type="audio/mpeg">
     </audio>
 
@@ -56,46 +59,114 @@
     <meta charset="utf-8">
     <title>BomberFriends</title>
   </head>
+
   <body>
     <h1>BomberFriends</h1>
+    <div  class="links">
+      <a href="https://github.com/zepdrix">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/lu-yang-633b5b27">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a href="https://angel.co/lu-yang-5">
+        <i class="fa fa-angellist" aria-hidden="true"></i>
+      </a>
+    </div>
     <canvas id="canvas"></canvas>
     <script type="application/javascript" src="vendor/keymaster.js"></script>
     <script type="application/javascript" src="lib/bundle.js"></script>
 
     <section class="instructions">
-      <p>**press 't' to toggle music**</p>
-      <p>**press 'y' to toggle sound effects**</p>
+
+      <!-- <div class="audio">
+
+      <p>**press 't' to toggle music**
+        <br/>
+        **press 'y' to toggle sound effects**</p>
+      </div> -->
+
+
       <div class="intro">
         <h2>How to Play</h2>
-
-      <p>
-        You control a character that can drop bombs. The goal is to blow up the other player!<br/>
-      <h3>Powerups</h3>
-        You can only drop 1 bomb at a time when you first spawn. A bomb powerup adds 1 to how many you can drop at a time!
-        <p>
-
-        </p>
-        The bombs you start out with are very weak, but flame powerups will increase their strength!
-        <p>
-
-        </p>
-        Movement speed can also be increased with the speed powerup!
-      </p>
-    </div>
-    <div class="controls">
-      <h3>Player 1 Controls</h3>
-      <p>
-        To Move: W, A, S, D
+        <p class="sound-helper">**press 'T' to toggle music and 'Y' to toggle sound effects**</p>
         <br/>
-        To Drop Bomb: V
-      </p>
-      <h3>Player 2 Controls</h3>
-      <p>
-        To Move: I, J, K, L
+        <p>
+          You control a character that can drop bombs. The goal is to blow up the other player!<br/>
+        </p>
+      </div>
+
+
+
+
+
+      <div class="character">
+        <h3>Characters</h3>
+        <p>
+          Your character starts out with 3 lives and you can only drop 1 bomb at a time. Your bomb is very weak, so pick up powerups to increase the number of bombs you can drop and your bombs' strength.
+        </p>
+      </div>
+      <div class="controls">
+        <h3>Player 1 Controls</h3>
+        <p>
+          To Move: W, A, S, D
+          <br/>
+          To Drop Bomb: V
+        </p>
+        <h3>Player 2 Controls</h3>
+        <p>
+          To Move: I, J, K, L
+          <br/>
+          To Drop Bomb: P
+        </p>
         <br/>
-        To Drop Bomb: P
-      </p>
-      <div>
+        <h3>Contact</h3>
+        <p>
+          <a href="https://github.com/zepdrix">
+            GitHub
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/lu-yang-633b5b27">
+            LinkedIn
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </p>
+        <p>
+          <a href="https://angel.co/lu-yang-5">
+            AngelList
+            <i class="fa fa-angellist" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+      <br/>
+
+      <div class="powerups">
+        <h3>Powerups</h3>
+
+        <div class="powerup-item">
+          <img src='img/flamePowerup.png'/>
+          <p class="powerup-p">
+            A Flame Powerup increases the blast length of your bombs by 1
+          </p>
+        </div>
+
+        <div class="powerup-item">
+          <img src='img/bombPowerup.png'/>
+          <p class="powerup-p">
+            A Bomb Powerup increases the number of bombs you can drop at a time by 1
+          </p>
+        </div>
+
+        <div class="powerup-item">
+          <img src='img/speedPowerup.png'/>
+          <p class="powerup-p">
+            A Speed Powerup increases your speed by a little bit
+          </p>
+        </div>
+
+      </div>
     </section>
   </body>
 </html>
