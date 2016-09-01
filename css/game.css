@@ -32,10 +32,15 @@ body {
   height: 100%;
   font-family: 'Stay_Writer', sans-serif;
   font-size: 24px;
-  color: lightgrey;
+  color: #FFD894;
   float: left;
   background-image: url('../img/triangles_tile.jpg');
   /*opacity: 0.4;*/
+  /*-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);*/
   /*background: linear-gradient(to right, #C4EDFF, #41CCA5);*/
   /*background-color: #C4EDFF;*/
 }
@@ -66,8 +71,8 @@ h3 {
 }
 
 canvas {
-  border-style: inset;
-  border: 15px 15px  grey;
+  /*border-style: inset;*/
+  border: 15px inset #FFD894;
   display: block;
   /*float: left;*/
 
@@ -90,7 +95,7 @@ canvas {
   margin-bottom: 20px;
 
   border-radius: 10px;
-  background-color: rgba(222, 222, 222, 0.15);
+  background-color: rgba(182, 182, 182, 0.2);
 }
 
 .audio > p {
@@ -104,7 +109,7 @@ canvas {
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rgba(222, 222, 222, 0.15);
+  background-color: rgba(182, 182, 182, 0.2);
 }
 
 .powerups, .character {
@@ -112,7 +117,7 @@ canvas {
   float: left;
   width: 500px;
   margin-bottom: 20px;
-  background-color: rgba(222, 222, 222, 0.15);
+  background-color: rgba(182, 182, 182, 0.2);
 }
 
 a:hover {
@@ -128,7 +133,7 @@ a:hover {
   margin-left: 20px;
   float: right;
   width: 280px;
-  background-color: rgba(222, 222, 222, 0.15);
+  background-color: rgba(182, 182, 182, 0.2);
 }
 
 /*.controls {
