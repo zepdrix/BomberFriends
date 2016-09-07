@@ -1,5 +1,7 @@
 # BomberFriends
 ---
+[BomberFriends Live]
+[BomberFriends Live]: http://www.luyang.io/BomberFriends
 BomberFriends is a game that is inspired by the Bomberman video game franchise.
 
 The game allows players to control a character on a 2d grid map. All characters can drop bombs, which create flames that emanate from the bomb. The length of the flames are based on the 'strength' of the bomb, which can be improved by picking up a 'flame powerup'. The bombs and player character can be augmented by powerups that are revealed when a player destroys garbage 'blocks' that are randomly distributed throughout the map.
