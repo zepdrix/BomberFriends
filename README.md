@@ -12,7 +12,7 @@ The game's map tiles are arranged in a 2 dimensional array and rendered as a 17x
 
 ## Characters
 ---
-Each 'character' has its own.
+To be added...
 
 
 ## Animations
