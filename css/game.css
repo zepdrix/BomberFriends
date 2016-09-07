@@ -50,7 +50,7 @@ h1 {
 
   /*margin-top: 10px;*/
   margin: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 50px;
   text-shadow: 0 0 50px lightgrey;
   text-align: center;
@@ -136,18 +136,9 @@ a:hover {
   background-color: rgba(182, 182, 182, 0.2);
 }
 
-/*.controls {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 10px;
-  margin-left: 20px;
-  float: right;
-  width: 280px;
-  background-color: rgba(222, 222, 222, 0.15);
-}*/
+
 
 .powerups {
-  /*padding-top: 10px;*/
   padding-bottom: 10px;
   width: 500px;
   float: right;
@@ -159,8 +150,17 @@ div > img {
   margin-right: 10px;
   margin-left: 10px;
   float: left;
-  /*top: -20px;*/
   width: 32px;
+}
+
+.name-email {
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.name-email:hover {
+  color: white;
+  transition: 0.5s;
 }
 
 .powerup-p {
@@ -180,7 +180,7 @@ div > img {
 
 .links {
   width: 170px;
-  padding-left: 20px;
+  padding-left: 35px;
   margin: 0 auto;
   margin-bottom: 10px;
 }

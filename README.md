@@ -1,26 +1,84 @@
-BomberFriends is a multiplayer game that is inspired by the Bomberman franchise.
+# BomberFriends
+---
+BomberFriends is a game that is inspired by the Bomberman video game franchise.
 
-The game allows a player to control a character on a 2d map. The character can drop bombs. The bombs and player character can be augmented by power-ups that are revealed when a player destroys garbage 'blocks' that are randomly distributed throughout the map.
+The game allows players to control a character on a 2d grid map. All characters can drop bombs, which create flames that emanate from the bomb. The length of the flames are based on the 'strength' of the bomb, which can be improved by picking up a 'flame powerup'. The bombs and player character can be augmented by powerups that are revealed when a player destroys garbage 'blocks' that are randomly distributed throughout the map.
 
-BomberFriends suppoers 2-player multiplayer.
+BomberFriends supports 2-player multiplayer from a single machine.
+---
+## The Map
+---
+The game's map tiles are arranged in a 2 dimensional array and rendered as a 17x13 square map. Characters, bombs, flames, tiles, blocks, and powerups are all stored in the GameMap class.
 
-I will use vanilla JavaScript and canvas to create the game. I will create classes for player-controller characters, maps, 'garbage blocks', and the bombs. I don't know how to create animation or even render 'sprites' so I'll have to research that and decide how I want to use it. Another issue is that I don't know how to write 'hit detection' for sprites. I know we used coordinates for asteroids but I'm not sure if that will work for this.
-I'm also not completely sure about how to both render the map and have it communicate with the JavaScript that I've written, so that will probably be the first thing I need to get straight.
+## Characters
+---
+Each 'character' has its own.
 
-Timeline
 
-Day 1
- - Create map, bomb, and character classes
- - Allow for control of character with the keyboard
- - Research animation and sprites
- - Refactor code
+## Animations
+---
+All animations come from sprite sheets that depict each frame of each object's animations. Any object that has animations is given an instance variable, this.frame, that specifies which frame to draw at any particular time. For example, when a bomb is dropped, it starts jiggling, as all bombs do, until it explodes. I've built this 'countdown animation' into the bomb's constructor function. As soon as it's initialized, the bomb's frame is cycles through the numbers 0 through 4, changing every 200 milliseconds:
 
-Day 2
- - Make game menus / screens for game selection and active play
- - Create garbage block classes
- - Create game sprites and animations
- - Refactor code
+```JavaScript
+var Bomb = function (mapPos, strength, gameMap, bombId, playerNum) {
+  this.mapPos = mapPos;
+  this.strength = strength;
+  this.gameMap = gameMap;
+  this.bombId = bombId;
+  this.playerNum = playerNum;
 
-Day 3
- - Implement multiplayer functions
- - Debug and refactor
+  this.time = 0;
+  this.explodeTime = 2000;
+  this.refreshIntervalId = setInterval( ()=> {
+    this.time += 200;
+    if (this.frame === 4) {
+      this.frame = 0;
+    } else {
+      this.frame += 1;
+    }
+  }, 200 );
+  this.frame = 0;
+};
+
+```
+
+When the GameMap renders the bombs, it will check to see which frame the bomb is currently at, and display the appropriate image at the appropriate position on the map:
+
+```JavaScript
+GameMap.prototype.renderBombs = function (ctx) {
+  this.bombs.forEach( (bomb, index) => {
+    if (bomb.time <= bomb.explodeTime) {
+      let sx = bomb.frame * 16;
+      ctx.drawImage(bombImage, sx, 0, 16, 16, bomb.mapPos[0] * this.tileSize, bomb.mapPos[1] * this.tileSize + 20, 16, 16);
+    } else {
+      explosion.currentTime = 0;
+      explosion.play();
+      this.removeBomb(index);
+    }
+  });
+};
+```
+
+In the renderBombs method, we are using the HTML canvas drawImage method with a sprite sheet called bombImage. This sprite sheet contains all the frames of animation, and since each frame is 16 pixels wide, we can select the correct image by specifying an sx (bomb.frame * 16), which is the x coordinate of the upperleft most corner of where we start to draw our image. We draw the corresponding bomb images as the frame changes
+
+<img src="img/bomb.png" width="200">
+
+More information about the drawImage method can be found [here].
+[here]: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
