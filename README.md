@@ -14,7 +14,7 @@ The game's map tiles are arranged in a 2 dimensional array and rendered as a 17x
 
 ## Characters
 ---
-To be added...
+Each character is an object that stores and updates its own map position. A human player controls the character and moves the character in the up, down, left, and right directions. Controls are very important for this game, avoiding bombs and picking up powerups needs to be precise, so efficient and smooth character control was a high priority. The map is arranged in a grid and characters can move freely in the 'corridors' where bombs and destructible blocks will obstruct movement. The control scheme allows for a player to input two movement directions (a horizontal and a vertical) and the path finding code will move the character in as many valid directions as possible. This allows for a character to 'fall' into a corridor when two directions are pressed so that a player won't have to be precise in positioning a character to move down a corridor.
 
 
 ## Animations
